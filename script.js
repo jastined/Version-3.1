@@ -71,8 +71,9 @@ function getComment(pid){
 			success: function(comments){
 				$.each(comments, function(i, comment){
 					str = "<div class = comment" + comment.id + ">"; 
+					str = str + "<div class = \"b_comment\"" + comment.id;
 					str = str + "<span style= \"color: white \">" + comment.body + "</span>";
-					str = str + "</div>";
+					str = str + "</div></div>";
 
 					$post.append(str);
 					str = null;  
